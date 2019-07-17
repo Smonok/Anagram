@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package anagram;
+=======
+import java.util.Arrays;
+>>>>>>> parent of 448fba5... Cleaned the code (removed unnecessary import)
 
 public class Anagram {
 	
