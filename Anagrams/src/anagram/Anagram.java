@@ -1,17 +1,15 @@
+package anagram;
 
 public class Anagram {
 	
-	 public static String reverseEveryWord(String original){
-				
+	 public String reverseEveryWord(String original){				
 		 	final String SPLIT_KEEPING_SPACES = "(?<= )|(?= )";
-		 	String[] splitStr = original.split(SPLIT_KEEPING_SPACES);
-			char[] symbol; 
-			int[] position;						
+		 	String[] splitStr = original.split(SPLIT_KEEPING_SPACES);		
 						
-			for(String splitted: splitStr) {
+			for(String splitted : splitStr) {
 				StringBuilder word = new StringBuilder(splitted);
-				symbol = new char[word.length()];
-				position  = new int[word.length()];
+				char[] symbol = new char[word.length()];
+				int[] position = new int[word.length()];
 				int index = 0;
 				for(int j = 0; j < word.length(); j++) {
 					if(!Character.isLetter(word.charAt(j))) {
