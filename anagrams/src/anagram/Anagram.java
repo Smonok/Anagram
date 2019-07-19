@@ -10,9 +10,8 @@ public class Anagram {
             StringBuilder word = new StringBuilder(splitOriginal[i]);
             char[] symbols = new char[word.length()];
             int[] positions = new int[word.length()];
-            int number = 0;
+            int number = findNotLetters(word, positions, symbols);
             
-            rememberNotLetters(word, positions, symbols, number);
             removeNotLetters(word, positions, number);
             word.reverse();
             insertNotLetters(word, positions, symbols, number);
@@ -32,7 +31,8 @@ public class Anagram {
             word.insert(notLettersPositions[i], notLettersSymbols[i]);	
     }
 	
-    private void rememberNotLetters(StringBuilder word, int[] notLettersPositions, char[] notLettersSymbols, int notLettersCounter) {
+    private int findNotLetters(StringBuilder word, int[] notLettersPositions, char[] notLettersSymbols) {
+        int notLettersCounter = 0;
         for(int i = 0; i < word.length(); i++) {
             if(!Character.isLetter(word.charAt(i))) {
                 notLettersSymbols[notLettersCounter] = word.charAt(i);
@@ -40,6 +40,8 @@ public class Anagram {
                 notLettersCounter++;
             }
         }
-    }	
+        
+        return notLettersCounter;
+    }    
 }
 
