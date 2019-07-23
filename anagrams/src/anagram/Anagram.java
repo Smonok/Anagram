@@ -21,13 +21,13 @@ public class Anagram {
         return String.join("", splitOriginal);
     }	
 	
-    private void removeNotLetters(StringBuilder word, int[] positions, int numberOfNotLetters) {
-        for(int i = numberOfNotLetters - 1; i >= 0; i--)
+    private void removeNotLetters(StringBuilder word, int[] positions, int counter) {
+        for(int i = counter - 1; i >= 0; i--)
             word.deleteCharAt(positions[i]);
     }
     
-    private void insertNotLetters(StringBuilder word, int[] positions, char[] symbols, int numberOfNotLetters) {
-        for(int i = 0; i < numberOfNotLetters; i++)
+    private void insertNotLetters(StringBuilder word, int[] positions, char[] symbols, int counter) {
+        for(int i = 0; i < counter; i++)
             word.insert(positions[i], symbols[i]);	
     }
 	
