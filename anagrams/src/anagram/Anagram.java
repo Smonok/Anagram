@@ -21,27 +21,27 @@ public class Anagram {
         return String.join("", splitOriginal);
     }	
 	
-    private void removeNotLetters(StringBuilder word, int[] notLettersPositions, int numberOfNotLetters) {
+    private void removeNotLetters(StringBuilder word, int[] positions, int numberOfNotLetters) {
         for(int i = numberOfNotLetters - 1; i >= 0; i--)
-            word.deleteCharAt(notLettersPositions[i]);
+            word.deleteCharAt(positions[i]);
     }
     
-    private void insertNotLetters(StringBuilder word, int[] notLettersPositions, char[] notLettersSymbols, int numberOfNotLetters) {
+    private void insertNotLetters(StringBuilder word, int[] positions, char[] symbols, int numberOfNotLetters) {
         for(int i = 0; i < numberOfNotLetters; i++)
-            word.insert(notLettersPositions[i], notLettersSymbols[i]);	
+            word.insert(positions[i], symbols[i]);	
     }
 	
-    private int findNotLetters(StringBuilder word, int[] notLettersPositions, char[] notLettersSymbols) {
-        int notLettersCounter = 0;
+    private int findNotLetters(StringBuilder word, int[] positions, char[] symbols) {
+        int index = 0;
         for(int i = 0; i < word.length(); i++) {
             if(!Character.isLetter(word.charAt(i))) {
-                notLettersSymbols[notLettersCounter] = word.charAt(i);
-                notLettersPositions[notLettersCounter] = i;
-                notLettersCounter++;
+                symbols[index] = word.charAt(i);
+                positions[index] = i;
+                index++;
             }
         }
         
-        return notLettersCounter;
+        return index;
     }    
 }
 
