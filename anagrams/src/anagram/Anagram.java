@@ -7,12 +7,12 @@ public class Anagram {
         String[] splitOriginal = original.split(WORDS_AND_SPACES);
 
         for (int i = 0; i < splitOriginal.length; i++)
-            splitOriginal[i] = reverseWord(splitOriginal[i]);
+            splitOriginal[i] = reverseOnlyLetters(splitOriginal[i]);
 
         return String.join("", splitOriginal);
     }
 
-    private String reverseWord(String inputWord) {
+    private String reverseOnlyLetters(String inputWord) {
         StringBuilder word = new StringBuilder(inputWord);
         char[] symbols = new char[word.length()];
         int[] positions = new int[word.length()];
@@ -46,4 +46,3 @@ public class Anagram {
         return index;
     }
 }
-
