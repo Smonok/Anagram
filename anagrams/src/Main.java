@@ -8,3 +8,4 @@ public class Main {
         System.out.format("Input string: %s\nString after reverse: %s", testStr, anagram.reverseEveryWord(testStr));
     }
 }
+
