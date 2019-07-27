@@ -4,6 +4,8 @@ public class Anagram {
     private final String WORDS_AND_SPACES = "(?<= )|(?= )";
 
     public String reverseEveryWord(String original) {
+        if (original == null)
+            throw new IllegalArgumentException();
         String[] splitOriginal = original.split(WORDS_AND_SPACES);
 
         for (int i = 0; i < splitOriginal.length; i++)
@@ -21,6 +23,7 @@ public class Anagram {
         removeNotLetters(word, positions, number);
         word.reverse();
         insertNotLetters(word, positions, symbols, number);
+
         return word.toString();
     }
 
