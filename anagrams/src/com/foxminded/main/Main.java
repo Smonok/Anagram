@@ -1,4 +1,6 @@
-import anagram.Anagram;
+package com.foxminded.main;
+
+import com.foxminded.anagram.Anagram;
 
 public class Main {
 
