@@ -57,7 +57,7 @@ class AnagramTest {
     }
 
     @Test
-    void reverseEveryWordShouldReturnReversedStringWhenInputContainsWordWithOnlyLetters() {
+    void reverseEveryWordShouldReturnReversedStringWhenInputOnlyLetters() {
         String parameter = "ytrewq";
         String expectedResult = "qwerty";
         String actualResult = new Anagram().reverseEveryWord(parameter);
@@ -65,7 +65,7 @@ class AnagramTest {
     }
 
     @Test
-    void reverseEveryWordShouldReturnReversedStringWhenInputContainsOneLetterWithDifferentCases() {
+    void reverseEveryWordShouldReturnReversedStringWhenInputContainsSameLetterWithDifferentCases() {
         String parameter = "aaAaaaA";
         String expectedResult = "AaaaAaa";
         String actualResult = new Anagram().reverseEveryWord(parameter);
