@@ -17,80 +17,80 @@ class AnagramTest {
     @Test
     void reverseEveryWordShouldReturnEmptyStringWhenEmptyStringOnInput() {
         String parameter = "";
-        String expectedactualResult = "";
+        String expectedResult = "";
         String actualResult = new Anagram().reverseEveryWord(parameter);
-        assertEquals(expectedactualResult, actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
     void reverseEveryWordShouldReturnSameStringWhenInputContainsOnlyOneSpace() {
         String parameter = " ";
-        String expectedactualResult = " ";
+        String expectedResult = " ";
         String actualResult = new Anagram().reverseEveryWord(parameter);
-        assertEquals(expectedactualResult, actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
     void reverseEveryWordShouldReturnSameStringWhenInputContainsOnlySpaces() {
         String parameter = "   ";
-        String expectedactualResult = "   ";
+        String expectedResult = "   ";
         String actualResult = new Anagram().reverseEveryWord(parameter);
-        assertEquals(expectedactualResult, actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
     void reverseEveryWordShouldReturnSameStringWhenInputContainsOnlyOneLetter() {
         String parameter = "a";
-        String expectedactualResult = "a";
+        String expectedResult = "a";
         String actualResult = new Anagram().reverseEveryWord(parameter);
-        assertEquals(expectedactualResult, actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
     void reverseEveryWordShouldReturnSameStringWhenInputContainsLowerCaseIdenticalLetters() {
         String parameter = "aaaaaaaaa";
-        String expectedactualResult = "aaaaaaaaa";
+        String expectedResult = "aaaaaaaaa";
         String actualResult = new Anagram().reverseEveryWord(parameter);
-        assertEquals(expectedactualResult, actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
     void reverseEveryWordShouldReturnReversedStringWhenInputContainsWordWithOnlyLetters() {
         String parameter = "ytrewq";
-        String expectedactualResult = "qwerty";
+        String expectedResult = "qwerty";
         String actualResult = new Anagram().reverseEveryWord(parameter);
-        assertEquals(expectedactualResult, actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
     void reverseEveryWordShouldReturnReversedStringWhenInputContainsOneLetterWithDifferentCases() {
         String parameter = "aaAaaaA";
-        String expectedactualResult = "AaaaAaa";
+        String expectedResult = "AaaaAaa";
         String actualResult = new Anagram().reverseEveryWord(parameter);
-        assertEquals(expectedactualResult, actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
     void reverseEveryWordShouldReturnSameStringWhenInputContainsOnlyNonLetters() {
         String parameter = "1234!`*";
-        String expectedactualResult = "1234!`*";
+        String expectedResult = "1234!`*";
         String actualResult = new Anagram().reverseEveryWord(parameter);
-        assertEquals(expectedactualResult, actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
     void reverseEveryWordShouldReturnStringWithReversedOnlyLettersWhenInputContainsStringWithLettersAndNonLetters() {
         String parameter = "d1c1ba";
-        String expectedactualResult = "a1b1cd";
+        String expectedResult = "a1b1cd";
         String actualResult = new Anagram().reverseEveryWord(parameter);
-        assertEquals(expectedactualResult, actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
     void reverseEveryWordShouldReturnStringWithReversedOnlyLettersInEveryWordWhenInputStringContainsSeveralWordsWithLettersAndNonLetters() {
         String parameter = "d1c1ba hgf!e";
-        String expectedactualResult = "a1b1cd efg!h";
+        String expectedResult = "a1b1cd efg!h";
         String actualResult = new Anagram().reverseEveryWord(parameter);
-        assertEquals(expectedactualResult, actualResult);
+        assertEquals(expectedResult, actualResult);
     }
 }
