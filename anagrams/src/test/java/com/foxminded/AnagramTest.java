@@ -11,7 +11,9 @@ class AnagramTest {
     @Test
     void reverseEveryWordShouldThrowIllegalArgumentExceptionWhenNull() {
         String parameter = null;
-        assertThrows(IllegalArgumentException.class, () -> new Anagram().reverseEveryWord(parameter));
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Anagram().reverseEveryWord(parameter);
+        });
     }
 
     @Test
