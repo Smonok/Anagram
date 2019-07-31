@@ -1,6 +1,6 @@
-package com.foxminded.main;
+package main.java.com.foxminded;
 
-import com.foxminded.anagram.Anagram;
+import main.java.com.foxminded.Anagram;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package com.foxminded.anagram;
+package main.java.com.foxminded;
 
 public class Anagram {
     private final String WORDS_AND_SPACES = "(?<= )|(?= )";
