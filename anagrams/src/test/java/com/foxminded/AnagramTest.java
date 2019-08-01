@@ -41,7 +41,7 @@ class AnagramTest {
     }
 
     @Test
-    void reverseEveryWordShouldReturnSameStringWhenInputContainsOnlyOneLetter() {
+    void reverseEveryWordShouldReturnSameStringWhenInputOnlyOneLetter() {
         String parameter = "a";
         String expectedResult = "a";
         String actualResult = new Anagram().reverseEveryWord(parameter);
@@ -57,7 +57,7 @@ class AnagramTest {
     }
 
     @Test
-    void reverseEveryWordShouldReturnReversedStringWhenInputOnlyLetters() {
+    void reverseEveryWordShouldReverseStringWhenInputOnlyLetters() {
         String parameter = "ytrewq";
         String expectedResult = "qwerty";
         String actualResult = new Anagram().reverseEveryWord(parameter);
@@ -65,7 +65,7 @@ class AnagramTest {
     }
 
     @Test
-    void reverseEveryWordShouldReturnReversedStringWhenInputContainsSameLetterWithDifferentCases() {
+    void reverseEveryWordShouldReverseStringWhenInputSameLetterWithDifferentCases() {
         String parameter = "aaAaaaA";
         String expectedResult = "AaaaAaa";
         String actualResult = new Anagram().reverseEveryWord(parameter);
@@ -81,7 +81,7 @@ class AnagramTest {
     }
 
     @Test
-    void reverseEveryWordShouldReturnStringWithReversedOnlyLettersWhenInputContainsStringWithLettersAndNonLetters() {
+    void reverseEveryWordShouldReverseOnlyLettersWhenInputContainsAnySymbols() {
         String parameter = "d1c1ba";
         String expectedResult = "a1b1cd";
         String actualResult = new Anagram().reverseEveryWord(parameter);
@@ -89,7 +89,7 @@ class AnagramTest {
     }
 
     @Test
-    void reverseEveryWordShouldReturnStringWithReversedOnlyLettersInEveryWordWhenInputStringContainsSeveralWordsWithLettersAndNonLetters() {
+    void reverseEveryWordShouldReverseEachWordSeparetlyWhenInputContainsSeveralWords() {
         String parameter = "d1c1ba hgf!e";
         String expectedResult = "a1b1cd efg!h";
         String actualResult = new Anagram().reverseEveryWord(parameter);
